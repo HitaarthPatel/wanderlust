@@ -23,7 +23,24 @@ router.route("/")
 
 
 //New route
-router.get("/new",isLoggedIn,listingController.renderNewform);        
+router.get("/new",isLoggedIn,listingController.renderNewform); 
+
+router.get("/search", wrapAsync(async (req, res) => {
+  const query = req.query.q || "";
+  const regex = new RegExp(query, "i"); // case-insensitive match
+
+  const listings = await Listing.find({
+    $or: [{ title: regex }, { location: regex }] // search in title or location
+  });
+
+  const allListingsFromDB = await Listing.find({}); // for fallback
+
+  res.render("listings/index", {
+    allListings: listings,
+    allListingsFromDB,
+    searchQuery: query
+  });
+}));
 
 router.route("/:id")
       .get(wrapAsync(listingController.showListing))
