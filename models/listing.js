@@ -26,6 +26,22 @@ const listingSchema=new Schema({
     price:Number,
     location:String,
     country:String,
+    category: {  
+    type: String,
+    enum: [
+      "Trending",
+      "Rooms",
+      "Iconic cities",
+      "Mountains",
+      "Castles",
+      "Amazing Pools",
+      "Camping",
+      "Farm",
+      "Arctic",
+      "Domes",
+      "Boats"
+    ],
+  },
     review:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Review"

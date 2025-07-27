@@ -9,7 +9,12 @@ module.exports.listingSchema = Joi.object({
         price:Joi.number().required().min(0),
         image:Joi.object({
             url:Joi.string().allow("",null)
-        }).optional()
+        }).optional(),
+        category: Joi.string().valid(
+            "Trending", "Rooms", "Iconic cities", "Mountains", 
+            "Castles", "Amazing Pools", "Camping", "Farm", 
+            "Arctic", "Domes", "Boats"
+        ).optional(),
     }).required()
 });
 

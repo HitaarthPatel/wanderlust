@@ -120,5 +120,5 @@ app.use((err,req,res,next)=>{
 app.use(express.json());
 
 app.listen(8080,()=>{
-    console.log("server is listening to port 8080");
+    console.log("server is listening to port 3000");
 });

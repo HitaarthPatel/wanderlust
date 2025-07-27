@@ -34,6 +34,7 @@ router.route("/:id")
 //Edit Route
 
 router.get("/:id/edit",isLoggedIn,isOwner,wrapAsync(listingController.renderEditform));
+router.get("/category/:category", wrapAsync(listingController.filterlisting));
 
 
 module.exports=router;
