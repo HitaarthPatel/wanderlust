@@ -1,13 +1,14 @@
 <style>
   .search-btn{
-    background-color: #fe424d;
-    color: #fff;
+    background-color: #8b2f2f;
+    color: #f5f0e1;
     border-radius: 25px;
     padding: 0 1rem 0 1rem;
   }
   .search-btn:hover{
-    background-color: #fe424d;
-    color: #fff;
+    background-color: #f5f0e1;
+    color: #8b2f2f;
+    border: 2px solid #283618;
   }
   .search-btn i {
     display: inline;
@@ -22,7 +23,10 @@
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+      <a class="navbar-brand" href="/listings">
+      <img src="/images/logo.png" alt="Yatraa Logo" style="height: 60px; border-radius: 10px; margin-right: 8px; border: 2px solid #8b2f2f;">
+  
+    </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,15 +38,15 @@
 
         <div class="navbar-nav ms-auto">
           <form class="d-flex" role="search" action="/listings/search" method="GET">
-            <input class="form-control me-2 search-inp" type="search" name="q" placeholder="search destinations" required>
-            <button class="btn search-btn" type="submit">
+            <input class="form-control me-2 search-inp" type="search" name="q" style="border:1px solid #8b2f2f; background-color: #f5f0e1; color: #8b2f2f;" placeholder="search destinations" required>
+            <button class="btn search-btn" style="background-color: #f5f0e1; color: #8b2f2f;" type="submit">
               <i class="fa-solid fa-magnifying-glass"></i>Search</button>
           </form>
 
         </div>
 
         <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <a class="nav-link" href="/listings/new">Add New Listing</a>
           <% if(!currUser){ %>
           <a class="nav-link"  href="/signup"><b>Sign up</b></a>
           <a class="nav-link" href="/login"><b>Log in</b></a>

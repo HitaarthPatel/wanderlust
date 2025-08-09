@@ -2,14 +2,39 @@ body{
     font-family: "Plus Jakarta Sans",sans-serif !important; 
     display: flex;
     flex-direction: column;
+    background-color: #f5f0e1 !important;
+    color: #222222;
     min-height: 100vh; 
 }
 .container{
     flex:1;
 }
+
+.row-home{
+    border: 2px solid #8b2f2f; 
+    border-radius: 2rem; 
+    margin-top: 6rem !important; 
+    padding: 0; 
+    margin-left: 15rem !important; 
+    margin-right: 15rem !important;
+}
+
 .navbar{
     height: 5rem;
-    background-color: white;
+    background-color: #8b2f2f;
+    color: #f5f0e1;
+    border-bottom: 2px solid #8b2f2f;
+}
+
+.nav-link,.navbar a,
+.navbar-brand,
+.navbar-nav {
+    color:#f5f0e1  !important;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #f5f0e1 !important;
 }
 
 .fa-compass{
@@ -17,18 +42,18 @@ body{
     font-size: 2rem;
 }
 
-.nav-link{
-    color: #222222 !important;
-}
+
 
 /*Footer*/
 .f-info-links a{
     text-decoration: none;
-    color: #222222;
+    color: #8b2f2f;
+    margin: 0 1rem;
 }
 
 .f-info-links a:hover{
     text-decoration: underline;
+    color: #8b2f2f;
     
 }
 .f-info-links,.f-info-socials,.f-info-brand{
@@ -48,7 +73,9 @@ body{
     text-align: center;
     height: 8rem;
     display: flex;
-    background-color: #ebebeb;
+    padding: 1.5rem 1rem;
+    background-color:#8b2f2f !important;
+    color: #f5f0e1;
     flex-wrap: wrap;
     justify-content: center;
     align-items: space-evenly;
@@ -57,24 +84,47 @@ body{
 /*Cards*/
 .listing-card{
     border: none !important;
+    border-radius: 1rem !important;
     margin-bottom: 2rem;
+    background-color: #ffffff;
+    color: #283618;
+    
+}
+
+.listing-card:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
 }
 
 .card-img-top{
-    border-radius: 1rem !important;
+    border-radius: 1rem 1rem 0 0 !important;
     width: 100% !important;
+    display: block;
     object-fit: cover !important;
+    margin: 0;
 }
 
 .card-body{
-    padding: 0 !important;
+    padding: 1rem !important;
+    margin-bottom: 1rem;
+
+}
+.listing-link{
+    text-decoration: none;
+    color: #283618 !important;
+    
 }
 
 .card-text p{
     font-weight: 400 !important;
+    
 }
 .listing-link{
     text-decoration: none;
+    color: #283618 !important;
+
 }
 .card-img-overlay{
     opacity: 0;
@@ -100,7 +150,12 @@ body{
 
 /*Show page*/
 .show-img{
-    height: 30vh;
+    /*height: 30vh;*/
+  width: 100% !important;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .btns{
@@ -108,13 +163,19 @@ body{
 }
 
 .show-card{
-    padding-left: 0;
-    padding-right: 0;
+    /*padding-left: 0;
+    padding-right: 0;*/
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-top: 1rem;
 }
 
 /*Map*/
 #map {
     height: 400px;
-    width: 60vh;
+    width: 80vh;
+    border-radius: 10px;
+    border: 2px solid #8b2f2f;
 
 }
